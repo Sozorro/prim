@@ -1,28 +1,25 @@
-class Prim2M {
-    public static void main(String[] args) {
-        prim p = prim.make_ob();
-        System.out.println(p);
-        prim p1 = prim.make_ob();
-        System.out.println(p1);
-        prim2 p2 = prim2.make_ob();
-        System.out.println(p2);
-        prim2 p3 = prim2.make_ob();
-        System.out.println(p3);
+public class Prim2M {
+    private static int c = 0;
+    private Prim2M (){
+        System.out.println("объект создан");
+        int c = 0;
     }
-    class prim2 {
-        private static int c = 0;
-        private prim2(){
+    public static Prim2M mack() {
+        System.out.println(c);
+        if (c <= 1) {
+            Prim2M a = new Prim2M();
+            c++;
+            return a;
         }
-        public static prim2 make_ob(){
-            if(c == 0) {
-                prim2 p = new prim2();
-                c = 1;
-                System.out.println("объект создан");
-                return p;
-            }
-            System.out.println("не более одного объекта");
+        else {
+            System.out.println("более 2 объектов");
             return null;
-            
         }
     }
+    public static Prim2M mack2() {
+        Prim2M a = new Prim2M();
+        c++;
+        return a;
+    }
+
 }

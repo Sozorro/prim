@@ -1,16 +1,12 @@
-class prim {
-    private static int c = 0;
-    private prim(){
+
+public class prim extends Prim2M {
+    public prim(int a){
+        super(a);
     }
-    public static prim make_ob(){
-        if(c == 0) {
-            prim p = new prim();
-            c = 1;
-            System.out.println("объект создан");
-            return p;
-        }
-        System.out.println("не более одного объекта");
-        return null;
-        
+    @Override
+    protected void nasl(){
+        System.out.println("другой текст");
+        super.nasl();
     }
+
 }
