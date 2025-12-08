@@ -1,5 +1,3 @@
-
 public enum Emotion {
-    neitral;
-    String f = "re";
+    SAD, PAIN, FUN, CRY, NEUTRAL, SOLACE//утешение 
 }
